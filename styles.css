@@ -75,7 +75,7 @@ nav ul li a { text-decoration: none;
   padding: 50px;
   background: linear-gradient(to bottom, #1e90ff, #001f3f);
   color: white;
-  background-image: url("images/entête.png");
+  background-image: url("entête.png");
 background-size: auto;
 b  
 }
