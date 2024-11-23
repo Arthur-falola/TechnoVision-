@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ton-site.github.io/</loc>
+    <loc>https://arthur-falola.github.io/TechnoVision-/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ton-site.github.io/article1.html</loc>
+    <loc>https://arthur-falola.github.io/TechnoVision-/article1.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ton-site.github.io/article2.html</loc>
+    <loc>https://arthur-falola.github.io/TechnoVision-/article2.html</loc>
     <priority>0.8</priority>
   </url>
   <!-- Ajoute ici toutes les pages de ton site -->
