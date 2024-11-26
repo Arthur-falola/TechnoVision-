@@ -21,6 +21,7 @@ const articles = [
   { title: "Les startups technologiques africaines", link: "article8.html" },
   { title: "La réalité augmentée en 2024", link: "article9.html" },
   { title: "L'énergie renouvelable et la technologie", link: "article10.html" },
+  { title:  "Les meilleurs languages de programmation en 2024", link: "langage-progammation.html" }, 
 ];
 
 // Fonction de recherche
