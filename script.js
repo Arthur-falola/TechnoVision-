@@ -37,12 +37,33 @@ document.getElementById("searchButton").addEventListener("click", function () {
     alert("Aucun article correspondant trouvé.");
   }
 });
+// Fonction pour charger les "J’aime" depuis LocalStorage
+function loadLikes() {
+  const likeButtons = document.querySelectorAll(".like-button");
+
+  likeButtons.forEach((button) => {
+    const articleId = button.getAttribute("data-article-id");
+    const likeCount = localStorage.getItem(`like-${articleId}`) || 0;
+
+    // Met à jour le compteur affiché
+    const likeCountElement = button.querySelector(".like-count");
+    likeCountElement.textContent = likeCount;
+
+    // Désactiver le bouton si l'utilisateur a déjà aimé
+    if (localStorage.getItem(`liked-${articleId}`)) {
+      button.disabled = true;
+      button.textContent = "❤️ Aimé";
+    }
+  });
+}
+
 // Fonction pour gérer les clics sur les boutons "J’aime"
-document.addEventListener("DOMContentLoaded", function () {
+function handleLikeButtons() {
   const likeButtons = document.querySelectorAll(".like-button");
 
   likeButtons.forEach((button) => {
     button.addEventListener("click", function () {
+      const articleId = button.getAttribute("data-article-id");
       const likeCountElement = this.querySelector(".like-count");
       let likeCount = parseInt(likeCountElement.textContent);
 
@@ -50,9 +71,19 @@ document.addEventListener("DOMContentLoaded", function () {
       likeCount += 1;
       likeCountElement.textContent = likeCount;
 
-      // Désactive le bouton après un clic (optionnel)
+      // Sauvegarde le compteur et l'état du bouton dans LocalStorage
+      localStorage.setItem(`like-${articleId}`, likeCount);
+      localStorage.setItem(`liked-${articleId}`, true);
+
+      // Désactive le bouton
       this.disabled = true;
       this.textContent = "❤️ Aimé";
     });
   });
+}
+
+// Charger les données et activer les boutons
+document.addEventListener("DOMContentLoaded", function () {
+  loadLikes();
+  handleLikeButtons();
 });
