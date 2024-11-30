@@ -176,15 +176,16 @@ footer {
 }
 
 .like-button {
-  background-color: red;
+  background-color: green ;
   border: none;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
+  display: flex ;
 }
 
 .like-button:hover {
-  color: #ff1a1a;
+  color: white ;
   transform: scale(1.5);
 }
 
