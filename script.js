@@ -37,3 +37,22 @@ document.getElementById("searchButton").addEventListener("click", function () {
     alert("Aucun article correspondant trouvé.");
   }
 });
+// Fonction pour gérer les clics sur les boutons "J’aime"
+document.addEventListener("DOMContentLoaded", function () {
+  const likeButtons = document.querySelectorAll(".like-button");
+
+  likeButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const likeCountElement = this.querySelector(".like-count");
+      let likeCount = parseInt(likeCountElement.textContent);
+
+      // Augmente le compteur de "J’aime"
+      likeCount += 1;
+      likeCountElement.textContent = likeCount;
+
+      // Désactive le bouton après un clic (optionnel)
+      this.disabled = true;
+      this.textContent = "❤️ Aimé";
+    });
+  });
+});
