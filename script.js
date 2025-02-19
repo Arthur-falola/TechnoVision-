@@ -87,3 +87,20 @@ document.addEventListener("DOMContentLoaded", function () {
   loadLikes();
   handleLikeButtons();
 });
+
+//Les actions du menu
+
+document.getElementById("menu-button").addEventListener("click", function() {
+    var menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+});
+
+// Fermer le menu si l'utilisateur clique en dehors
+document.addEventListener("click", function(event) {
+    var menu = document.getElementById("menu");
+    var button = document.getElementById("menu-button");
+    if (event.target !== menu && event.target !== button) {
+        menu.style.display = "none";
+    }
+});
+
