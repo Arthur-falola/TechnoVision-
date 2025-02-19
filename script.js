@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Les actions du menu
 
-document.getElementById("menu-button").addEventListener("click", function() {
+/*document.getElementById("menu-button").addEventListener("click", function() {
     var menu = document.getElementById("menu");
     menu.style.display = (menu.style.display === "block") ? "none" : "block";
 });
@@ -102,5 +102,5 @@ document.addEventListener("click", function(event) {
     if (event.target !== menu && event.target !== button) {
         menu.style.display = "none";
     }
-});
+});/*
 
